@@ -1,5 +1,3 @@
-using System;
-
 namespace EAD.CRM.Web.Models
 {
     public class ErrorViewModel

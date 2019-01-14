@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using EAD.CRM.Web.Models;
-using EAD.CRM.Web.Services;
 
 namespace EAD.CRM.Web.Controllers
 {
