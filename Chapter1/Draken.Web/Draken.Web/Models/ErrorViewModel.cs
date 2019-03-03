@@ -1,4 +1,3 @@
-using System;
 
 namespace Draken.Web.Models
 {
