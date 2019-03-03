@@ -1,6 +1,6 @@
 using System;
 
-namespace EAD.CRM.Web.Models
+namespace Draken.Web.Models
 {
     public class ErrorViewModel
     {

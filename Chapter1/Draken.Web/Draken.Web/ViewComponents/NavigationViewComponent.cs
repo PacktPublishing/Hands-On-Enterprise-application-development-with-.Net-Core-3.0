@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
-namespace EAD.CRM.Web.ViewComponents
+namespace Draken.Web.ViewComponents
 {
     public class NavigationViewComponent : ViewComponent
     {

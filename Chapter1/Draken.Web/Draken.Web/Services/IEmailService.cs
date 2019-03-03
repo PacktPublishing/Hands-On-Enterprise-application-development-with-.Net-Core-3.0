@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace EAD.CRM.Web.Services
+namespace Draken.Web.Services
 {
     public interface IEmailService
     {

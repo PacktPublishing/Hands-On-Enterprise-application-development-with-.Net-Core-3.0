@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace EAD.CRM.Web.Middlewares
+namespace Draken.Web.Middlewares
 {
     public class SecurityMiddleware
     {

@@ -1,4 +1,4 @@
-using EAD.CRM.Web.Middlewares;
+using Draken.Web.Middlewares;
 using Microsoft.AspNetCore.Builder;
 
 namespace Microsoft.Extensions.DependencyInjection

@@ -4,10 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using EAD.CRM.Web.Models;
-using EAD.CRM.Web.Services;
+using Draken.Web.Models;
 
-namespace EAD.CRM.Web.Controllers
+namespace Draken.Web.Controllers
 {
     public class HomeController : Controller
     {

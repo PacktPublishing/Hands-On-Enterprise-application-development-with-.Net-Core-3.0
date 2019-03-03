@@ -1,9 +1,8 @@
-using System;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 
-namespace EAD.CRM.Web.Services
+namespace Draken.Web.Services
 {
     public class EmailService : IEmailService
     {
@@ -18,9 +17,12 @@ namespace EAD.CRM.Web.Services
         }
         public async Task SendEmail(string toAddress, string subject, string htmlContent)
         {
-            var client = new SmtpClient(SMTPServer);
-            client.UseDefaultCredentials = false;
-            client.Credentials = new NetworkCredential(Username, Password);
+            var client = new SmtpClient(SMTPServer)
+            {
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(Username, Password),
+                Port = Port
+            };
 
             using (var mailMessage = new MailMessage())
             {
