@@ -6,7 +6,7 @@ namespace Draken.Web.ViewComponents
 {
     public class NavigationViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             var menus = new Dictionary<string, string>
             {
