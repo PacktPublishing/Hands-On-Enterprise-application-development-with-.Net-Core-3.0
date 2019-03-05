@@ -1,0 +1,29 @@
+﻿@model System.Collections.Generic.Dictionary<string, string>
+
+<ul class="navbar-nav flex-grow-1">
+    @foreach (var menu in Model)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark"
+               asp-controller="Home" asp-action="@menu.Value">@menu.Key</a>
+        </li>
+    }
+
+    @if (Context.User.Identity.IsAuthenticated)
+    {
+        <li>
+            <a class="nav-link text-dark" href="#">@Context.User.Identity.Name</a>
+        </li>
+        <li>
+            <a class="nav-link text-dark" asp-controller="Account" asp-action="Logout">Logout</a>
+        </li>
+    }
+    else
+    {
+        <li>
+            <a class="nav-link text-dark" asp-controller="Account" asp-action="Login">Login</a>
+        </li>
+    }
+
+
+</ul>

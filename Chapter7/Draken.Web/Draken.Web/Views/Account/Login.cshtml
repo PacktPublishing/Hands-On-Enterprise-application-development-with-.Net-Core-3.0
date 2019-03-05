@@ -1,0 +1,34 @@
+﻿@{
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm">
+            <p style="color:red; font-weight:bold;">
+                @ViewBag.Message
+            </p>
+            <form method="post" asp-action="Login" asp-controller="Account"
+                  asp-route-returnurl="@ViewData["ReturnUrl"]">
+                <div class="form-group">
+                    <label for="Username">Username</label>
+                    <input type="text" class="form-control" id="Username" name="Username" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password" name="Password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+</div>
+
+
+
+
+
