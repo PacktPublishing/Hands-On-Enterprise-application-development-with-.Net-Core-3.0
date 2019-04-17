@@ -1,0 +1,18 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+<div class="text-center">
+    <img src="~/images/tenor.gif" alt="Something went wrong" />
+    @if(Model.ErrorCode == 404)
+    {
+        <h1>Page Not found</h1>
+    }
+    else
+    {
+    <h1>Something went wrong at our end</h1>
+
+    <hr />
+    <h4>We're sorry. We're having some trouble completing your request. Please try again</h4>
+    }
+</div>
