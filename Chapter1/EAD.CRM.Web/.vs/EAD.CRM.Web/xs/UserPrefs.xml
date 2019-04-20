@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{A9A91AF5-EBC1-4F0C-9E35-AD9C69EAE1D9}|Default">
+  <MonoDevelop.Ide.ItemProperties.EAD.CRM.Web PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Middlewares/SecurityMiddlewareExtensions.cs">
+    <Files>
+      <File FileName="Program.cs" Line="8" Column="20" />
+      <File FileName="Controllers/HomeController.cs" Line="9" Column="27" />
+      <File FileName="../../../../../../../usr/local/share/dotnet/sdk/3.0.100-preview-010184/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.TargetingPackResolution.targets" Line="114" Column="5" />
+      <File FileName="Middlewares/SecurityMiddleware.cs" Line="21" Column="6" />
+      <File FileName="Middlewares/SecurityMiddlewareExtensions.cs" Line="13" Column="1" />
+      <File FileName="Startup.cs" Line="18" Column="35" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EAD.CRM.Web" expanded="True">
+            <Node name="EAD.CRM.Web" expanded="True">
+              <Node name="Middlewares" expanded="True">
+                <Node name="SecurityMiddlewareExtensions.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
