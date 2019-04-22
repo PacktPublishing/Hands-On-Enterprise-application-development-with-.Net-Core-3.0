@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Draken.Web", "Draken.Web\Draken.Web.csproj", "{0DDAC341-69A8-44C6-B01B-559EF170C360}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Draken.Models", "Draken.Models\Draken.Models.csproj", "{53516412-96AC-428A-97CA-1285470027D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Draken.Repository", "Draken.Repository\Draken.Repository.csproj", "{74C4C355-66D9-425C-8BB8-E7C72A6D5D33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Draken.Service", "Draken.Service\Draken.Service.csproj", "{B03AD09D-D888-4570-9DDB-ADB6D7C6B535}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DDAC341-69A8-44C6-B01B-559EF170C360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDAC341-69A8-44C6-B01B-559EF170C360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDAC341-69A8-44C6-B01B-559EF170C360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDAC341-69A8-44C6-B01B-559EF170C360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53516412-96AC-428A-97CA-1285470027D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53516412-96AC-428A-97CA-1285470027D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53516412-96AC-428A-97CA-1285470027D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53516412-96AC-428A-97CA-1285470027D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C4C355-66D9-425C-8BB8-E7C72A6D5D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C4C355-66D9-425C-8BB8-E7C72A6D5D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C4C355-66D9-425C-8BB8-E7C72A6D5D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C4C355-66D9-425C-8BB8-E7C72A6D5D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03AD09D-D888-4570-9DDB-ADB6D7C6B535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03AD09D-D888-4570-9DDB-ADB6D7C6B535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03AD09D-D888-4570-9DDB-ADB6D7C6B535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03AD09D-D888-4570-9DDB-ADB6D7C6B535}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
