@@ -1,5 +1,3 @@
-using Autofac;
-using Autofac.Extensions.DependencyInjection;
 using Draken.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,20 +9,12 @@ using Microsoft.Extensions.Hosting;
 using SimpleInjector;
 using SimpleInjector.Integration.AspNetCore.Mvc;
 using SimpleInjector.Lifestyles;
-using System;
 
 namespace Draken.Web
 {
-    public class DefaultModule : Module
-    {
-        protected override void Load(ContainerBuilder builder)
-        {
-            builder.RegisterType<ContactService>().As<IContactService>();
-        }
-    }
-
     public class Startup
     {
+        // Holds the Simple Injector IoC Container
         private readonly Container container = new Container();
 
         public Startup(IConfiguration configuration)
@@ -35,7 +25,7 @@ namespace Draken.Web
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -48,16 +38,42 @@ namespace Draken.Web
                 .AddNewtonsoftJson();
             services.AddRazorPages();
 
-            var containerBuilder = new ContainerBuilder();
-            containerBuilder.RegisterModule<DefaultModule>();
-            containerBuilder.Populate(services);
-            var container = containerBuilder.Build();
-            return new AutofacServiceProvider(container);
+            // Specify the default lifestyle for the objects
+            container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();
+            services.AddHttpContextAccessor();
+
+            // Add the SimpleInjectorControllerActivator to the services
+            services.AddSingleton<IControllerActivator>(
+                            new SimpleInjectorControllerActivator(container));
+
+            // Add the SimpleInjectorViewComponentActivator to the services
+            services.AddSingleton<IViewComponentActivator>(
+                            new SimpleInjectorViewComponentActivator(container));
+
+            // Enable the SimpleInjector CrossWiring
+            services.EnableSimpleInjectorCrossWiring(container);
+
+            // Enable the SimpleInjector for the request scope
+            services.UseSimpleInjectorAspNetRequestScoping(container);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // Register the MVC Controllers with the SimpleInjector Container
+            container.RegisterMvcControllers(app);
+
+            // Register the MVC Views with the SimpleInjector Container
+            container.RegisterMvcViewComponents(app);
+
+            // Register the ContactService with the SimpleInjector Container
+            container.Register<IContactService, ContactService>(Lifestyle.Transient);
+
+            // Instruct SimpleInjector to resolve the missing dependencies
+            container.AutoCrossWireAspNetComponents(app);
+
+            container.Verify();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

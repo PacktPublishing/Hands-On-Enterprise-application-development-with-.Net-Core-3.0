@@ -1,5 +1,3 @@
-using System;
-
 namespace Draken.Web.Models
 {
     public class ErrorViewModel
