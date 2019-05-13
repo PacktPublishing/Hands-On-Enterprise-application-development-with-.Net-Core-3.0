@@ -8,6 +8,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Draken.Models", "Draken.Mod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Draken.Service", "Draken.Service\Draken.Service.csproj", "{B03AD09D-D888-4570-9DDB-ADB6D7C6B535}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Draken.Repository", "Draken.Repository\Draken.Repository.csproj", "{D787BC22-2621-47EA-8FCB-EEB766FE7B3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{B03AD09D-D888-4570-9DDB-ADB6D7C6B535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B03AD09D-D888-4570-9DDB-ADB6D7C6B535}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B03AD09D-D888-4570-9DDB-ADB6D7C6B535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D787BC22-2621-47EA-8FCB-EEB766FE7B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D787BC22-2621-47EA-8FCB-EEB766FE7B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D787BC22-2621-47EA-8FCB-EEB766FE7B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D787BC22-2621-47EA-8FCB-EEB766FE7B3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

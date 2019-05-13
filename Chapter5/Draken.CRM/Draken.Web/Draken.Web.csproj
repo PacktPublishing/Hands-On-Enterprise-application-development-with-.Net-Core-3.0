@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Draken.Models\Draken.Models.csproj" />
+    <ProjectReference Include="..\Draken.Repository\Draken.Repository.csproj" />
     <ProjectReference Include="..\Draken.Service\Draken.Service.csproj" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,7 @@
-﻿using Draken.Service;
+﻿using Draken.Models;
+using Draken.Service;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace Draken.Web.Controllers
 {
@@ -16,6 +18,27 @@ namespace Draken.Web.Controllers
         {
             var contacts = this.contactService.GetAll();
             return View(contacts);
+        }
+
+        public IActionResult Create()
+        {
+            return View(new Contact());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Contact contact)
+        {
+            try
+            {
+                this.contactService.Create(contact);
+                return RedirectToAction(nameof(Index));
+            }
+            catch  (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+                return View();
+            }
         }
     }
 }

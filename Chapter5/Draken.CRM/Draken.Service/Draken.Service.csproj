@@ -6,5 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Draken.Models\Draken.Models.csproj" />
+    <ProjectReference Include="..\Draken.Repository\Draken.Repository.csproj" />
   </ItemGroup>
 </Project>
