@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Draken.Models\Draken.Models.csproj" />
+    <ProjectReference Include="..\Draken.Repository.Interfaces\Draken.Repository.Interfaces.csproj" />
+    <ProjectReference Include="..\Draken.Service.Interfaces\Draken.Service.Interfaces.csproj" />
+  </ItemGroup>
+</Project>
