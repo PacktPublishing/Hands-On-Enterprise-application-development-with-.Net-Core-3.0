@@ -1,0 +1,39 @@
+﻿@model System.Collections.Generic.List<Image>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form method="post" enctype="multipart/form-data" asp-action="UploadImage">
+    <div class="custom-file">
+        <input type="file" class="custom-file-input" name="files"
+               multiple="multiple" id="files" accept="image/*">
+        <label class="custom-file-label" for="files">Choose file</label>
+    </div><hr />
+    <button class="btn btn-primary" type="submit">Upload Images</button>
+</form>
+<hr />
+
+<div class="card-columns">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        var image = Model[i];
+        <div class="card">
+            <div class="thumbnail">
+                <div class="icon">
+                    <form method="post" asp-action="UpdateImage">
+                        <input type="hidden" value="@image.Filename" />
+                        <input type="hidden" value="@image.Description" />
+                        <input type="hidden" value="@image.Title" />
+                        <input type="image" src="~/images/edit.png" />
+                    </form>
+                    <form method="post" asp-action="RemoveImage"
+                          onsubmit="return confirm('Are you sure want to delete this file?')">
+                        <input type="hidden" id="Filename" name="Filename" value="@image.Filename" />
+                        <input type="image" src="~/images/remove.png" />
+                    </form>
+                </div>
+                <img class="card-img-top" src="@image.Uri">
+            </div>
+        </div>
+    }
+</div>
