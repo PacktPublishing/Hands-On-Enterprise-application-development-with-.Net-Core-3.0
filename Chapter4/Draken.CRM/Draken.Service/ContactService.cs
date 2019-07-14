@@ -10,16 +10,16 @@ namespace Draken.Service
 
     public class ContactService : IContactService
     {
-        readonly IContactService contactService;
-
-        public ContactService(IContactService contactService)
-        {
-            this.contactService = contactService;
-        }
-
         public IList<Contact> GetAll()
         {
-            return contactService.GetAll();
+            var contacts = new List<Contact>
+            {
+                new Contact() { FirstName = "Andrew", LastName = "Mathew", Email = "andrew@hotmail.com" },
+                new Contact() { FirstName = "John", LastName = "Mathew", Email = "andrew@hotmail.com" },
+                new Contact() { FirstName = "Rob", LastName = "Mathew", Email = "andrew@hotmail.com" }
+            };
+
+            return contacts;
         }
     }
 }

@@ -1,21 +1,21 @@
-﻿using System;
-using Draken.Repository;
+﻿using Draken.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Draken.Web.Controllers
 {
     public class ContactController : Controller
     {
-        readonly IContactRepository contactRepository;
+        readonly IContactService contactService;
 
-        public ContactController(IContactRepository contactRepository)
+        public ContactController(IContactService contactService)
         {
-            this.contactRepository = contactRepository;
+            this.contactService = contactService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var contacts = this.contactService.GetAll();
+            return View(contacts);
         }
     }
 }
