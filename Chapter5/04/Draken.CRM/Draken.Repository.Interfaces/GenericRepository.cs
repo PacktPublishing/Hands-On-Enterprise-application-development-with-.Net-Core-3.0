@@ -7,7 +7,7 @@ namespace Draken.Repository.Interfaces
     {
         T Get(int id);
         IEnumerable<T> GetAll();
-        void Add(T model);
+        void Create(T model);
         void Delete(int id);
         void Update(T model);
     }

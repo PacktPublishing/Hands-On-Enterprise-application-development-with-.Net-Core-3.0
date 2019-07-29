@@ -15,12 +15,12 @@ namespace Draken.Service
             this.contactRepository = contactRepository;
         }
 
-        public void Add(Contact contact)
+        public void Create(Contact contact)
         {
             contact.CreatedDate = contact.ModifiedDate = System.DateTime.Now;
             contact.CreatedBy = contact.ModifiedBy = "System";
 
-            contactRepository.Add(contact);
+            contactRepository.Create(contact);
         }
 
         public void Delete(int id)

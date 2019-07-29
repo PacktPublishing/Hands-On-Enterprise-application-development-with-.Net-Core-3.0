@@ -7,7 +7,7 @@ namespace Draken.Service.Interfaces
     {
         IEnumerable<Contact> GetAll();
         Contact Get(int id);
-        void Add(Contact contact);
+        void Create(Contact contact);
         void Delete(int id);
         void Update(Contact contact);
     }

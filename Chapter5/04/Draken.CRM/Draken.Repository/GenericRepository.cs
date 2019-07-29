@@ -30,7 +30,7 @@ namespace Draken.Repository
             this.modelName = typeof(T).Name;
         }
 
-        public void Add(T model)
+        public void Create(T model)
         {
             using (IDbConnection connection = Connection)
             {

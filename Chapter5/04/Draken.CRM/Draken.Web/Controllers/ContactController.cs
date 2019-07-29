@@ -31,7 +31,7 @@ namespace Draken.Web.Controllers
         {
             try
             {
-                this.contactService.Add(contact);
+                this.contactService.Create(contact);
                 return RedirectToAction(nameof(Index));
             }
             catch  (Exception ex)
